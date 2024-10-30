@@ -1,0 +1,26 @@
+version: '2'
+services:
+  wordpress:
+    container_name: wordpress-korean-spell-checker
+    image: wordpress:latest
+    external_links:
+      - mariadb:mysql
+      - mailhog
+    restart: always
+    environment:
+      VIRTUAL_HOST: spellchecker.local
+      WORDPRESS_DB_NAME: spellchecker.local
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DEBUG: 1
+      TZ: America/Toronto
+    volumes:
+      - ./:/var/www/html/wp-content/plugins/korean-spell-checker
+      - ../plugins/classic-editor:/var/www/html/wp-content/plugins/classic-editor
+    ports:
+      - 80
+    networks:
+      - local_default
+networks:
+  local_default:
+    external: true

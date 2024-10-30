@@ -1,0 +1,9 @@
+form#korean_spell_checker {display:none;}
+
+.mce-ico.mce-i-korean-spell-checker {
+	background: url('../images/icon.gif') repeat scroll 0 -20px transparent;
+
+	&:hover {
+		background-position: 0 0;
+	}
+}

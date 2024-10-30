@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<ruleset name="Sujin">
+    <!-- exclude non-php files -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>*.json</exclude-pattern>
+    <exclude-pattern>*.css</exclude-pattern>
+
+    <rule ref="WordPress-Core">
+        <exclude name="WordPress.WP.CapitalPDangit"/>
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+
+        <!-- should really be included, but too many errors to fix for now -->
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"/>
+        <exclude name="PEAR.NamingConventions.ValidClassName.Invalid"/>
+        <exclude name="PEAR.NamingConventions.ValidClassName.StartWithCapital"/>
+
+        <exclude name="Squiz.PHP.DisallowMultipleAssignments.Found"/>
+
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+
+        <exclude name="WordPress.PHP.DontExtract.extract_extract"/>
+
+        <exclude name="WordPress.WP.GlobalVariablesOverride.OverrideProhibited"/>
+
+        <exclude name="WordPress.WP.I18n.MissingSingularPlaceholder"/>
+        <exclude name="WordPress.WP.I18n.NoEmptyStrings"/>
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain"/>
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralText"/>
+        <exclude name="WordPress.WP.I18n.TooManyFunctionArgs"/>
+    </rule>
+
+    <rule ref="WordPressVIPMinimum">
+        <!-- should really be included, but too many errors to fix for now -->
+        <exclude name="WordPress.VIP.FileSystemWritesDisallow.file_ops_fwrite"/>
+        <exclude name="WordPress.VIP.OrderByRand.orderby_orderby"/>
+        <exclude name="WordPress.VIP.PostsPerPage.posts_per_page_numberposts"/>
+        <exclude name="WordPress.VIP.RestrictedVariables.user_meta__wpdb__usermeta"/>
+        <exclude name="WordPress.VIP.ValidatedSanitizedInput.InputNotSanitized"/>
+        <exclude name="WordPress.VIP.ValidatedSanitizedInput.InputNotValidated"/>
+
+        <exclude name="WordPressVIPMinimum.Classes.DeclarationCompatibility.DeclarationCompatibility"/>
+        <exclude name="WordPressVIPMinimum.Functions.CheckReturnValue.CheckReturnValue"/>
+        <exclude name="WordPressVIPMinimum.Variables.ServerVariables.UserControlledHeaders"/>
+        <exclude name="WordPressVIPMinimum.Variables.VariableAnalysis.SelfOutsideClass"/>
+
+        <exclude name="WordPressVIPMinimum.VIP.ErrorControl.ErrorControl"/>
+        <exclude name="WordPressVIPMinimum.VIP.ExitAfterRedirect.NoExit"/>
+
+        <exclude name="WordPressVIPMinimum.VIP.ProperEscapingFunction.hrefSrcEscUrl"/>
+        <exclude name="WordPressVIPMinimum.VIP.ProperEscapingFunction.htmlAttrNotByEscHTML"/>
+
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.count_user_posts_count_user_posts"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.get_posts_get_children"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.rewrite_rules_flush_rewrite_rules"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.url_to_postid_url_to_postid"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.user_meta_add_user_meta"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.user_meta_get_user_meta"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.user_meta_update_user_meta"/>
+        <exclude name="WordPressVIPMinimum.VIP.RestrictedFunctions.wp_is_mobile_wp_is_mobile"/>
+
+        <exclude name="WordPressVIPMinimum.VIP.WPQueryParams.suppressFiltersTrue"/>
+    </rule>
+</ruleset>
